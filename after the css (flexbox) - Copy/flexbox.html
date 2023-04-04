@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+<style>
+   .el--1{
+      background-color:blueviolet;
+    }
+    .el--2{
+      background-color:red;
+    }
+    .el--3{
+      background-color:green;
+       height:150px;   /*due to this the height of each elememt is 150px*/
+    }
+    .el--4{background-color:goldenrod;
+    }
+    .el--5{
+      background-color:palevioletred;
+    }
+    .el--6{
+      background-color:steelblue;
+    }
+    .el--7{background-color:yellow;
+    }
+    .el--8{background-color:crimson;
+    }
+    .container {/*this is flex container*/
+      /* starter */
+      font-family: sans-serif;
+      background-color: #ddd;
+      font-size: 32px;
+      margin:40px;
+
+
+      /* flexbox */
+       
+       display :flex;
+       align-items: center;/*It helps us to align the ement to centre but not the one with the height or the vertical alignment*/
+       justify-content: flex-start; /*it helps us to align items of the main axis*/
+       /* gap:30px; */
+       
+    }
+    /* .el{
+      margin-right: 30px;
+    } */
+    /* align the element of the container */
+    .el--1{
+      align-self: flex-start ;
+    }
+    .el--5{
+      align-self: stretch;
+      order:1;/* the orderv is inital all zero if you wnat to move it to left the lower than zero and if movie right greater than zero*/
+    }
+    .el--6{
+      order:-1;
+    }
+       /* flex :grow shrienks basis */
+       .el{
+        /* defaut value 
+         flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis:auto ; */
+        /*  we want to size flex item  with particular with the width we use flex basis */
+         /* flex-basis: 200px; */
+         flex-shrink: 0;
+           /* flex-grow: 1; */
+
+       }
+
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="el--1 el">HTML</div>
+    <div class="el--2 el">and</div>
+    <div class="el--3 el">CSS</div>
+    <div class="el--4 el">are</div>
+    <div class="el--5 el">amazing</div>
+    <!-- <div class="el--6 el">language</div>  -->
+     <!-- <div class="el--7 el">to</div>
+    <div class="el--8 el">learn</div>  -->
+  </div>
+  
+</body>
+</html>
